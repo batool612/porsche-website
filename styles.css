@@ -4,76 +4,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
-.navbar {
-    margin-bottom: 30px;
-}
-
-.cardBody {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    text-align: center;
-}
-
-.card {
-    width: 300px;
-    height: 300px;
-    perspective: 1000px;
-}
-
-.front,
-.back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transition: transform 0.6s;
-    backface-visibility: hidden;
-}
-
-.back {
-    transform: rotateY(180deg);
-}
-
-.card:hover .front {
-    transform: rotateY(180deg);
-}
-
-.card:hover .back {
-    transform: rotateY(0deg);
-}
-
-.usernameInput,
-.passwordInput {
-    margin-bottom: 10px;
-    width: calc(100% - 20px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.loginBtn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.switch {
-    margin-top: 20px;
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
 /* Footer */
 footer {
     background-color: #333;
@@ -211,27 +141,77 @@ nav ul li a span{
 nav ul li a span.rotate{
   transform: translateY(-50%) rotate(-180deg);
 }
-.content{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  color: #202020;
-  z-index: -1;
-  text-align: center;
-}
-.content .header{
-  font-size: 45px;
-  font-weight: 600;
-}
-.content p{
-  font-size: 30px;
-  font-weight: 500;
-}
-
 .carousel-inner .carousel-item  img {
 object-fit: cover;
 object-position: center;
 height: 100vh;
 
+}
+
+/*login*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;  
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+.login-form h2, .register-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+ input[type="text"], input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  opacity: .5;
+  background: black;
+  color:#fff
+}
+
+button[type="submit"] {
+  width: 90%;
+  padding: 10px;
+  background-color: #000000; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.switch-form {
+  margin-top: 10px;
+  font-size: 14px;
+  color:#fff
+}
+
+.switch-form a {
+  color: #fff; 
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.switch-form a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.login-form, .register-form {
+  border-bottom-left-radius: 0; /* Round only top corners */
+  border-bottom-right-radius: 0; /* Round only top corners */
+  border-bottom: none; /* Remove bottom border */
+}
+
+.register-form {
+  width: 30%;
 }
